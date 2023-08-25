@@ -1,0 +1,38 @@
+extends layoutBasic
+
+block left
+    div(class="row mt-3 ms-5")
+        div(class="fs-3")
+            i(class="bi bi-house-door-fill")
+            a(href="/dashboard" class="ms-4 font-size-2 align-middle text-decoration-none text-dark") Startseite
+    div(class="row mt-1 ms-5")
+        div(class="fs-3")
+            i(class="bi bi-people-fill")
+            a(href="/profile" class="ms-4 align-middle text-decoration-none text-dark") Profil
+    div(class="row mt-1 ms-5")
+        div(class="fs-3")
+            i(class="bi bi-person-fill")
+            a(href="/users" class="ms-4 align-middle text-decoration-none text-dark") Nutzer
+    div(class="row mt-2 ms-5")
+        div(class="fs-3 d-grid")
+            a(class="btn btn-primary rounded-pill" href="/other" role="button") Othern
+    div(class="row mt-2 ms-5")
+        div(class="fs-3 d-grid")
+            a(class="btn btn-primary rounded-pill" href="/logout" role="button") Logout
+
+block middle
+    h1(class="mt-3 ms-5") Othern
+        form(action="/other" method="post")
+            div(class="form-group mt-3")
+                textarea(class="form-control", id="inputOther", rows="5", name="other")
+            div(class="form-group")
+                button(type="submit", class="btn btn-primary") Othern
+
+        if error_Message
+            div(class="alert alert-danger fs-5 mt-4" role="alert") #{error_Message}
+
+
+
+
+
+
