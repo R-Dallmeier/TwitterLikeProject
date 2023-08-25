@@ -1,3 +1,3 @@
 # OTHer
 
-Starter project for OTHer, a Twitter clone.
+OTHer, a Twitter clone.
